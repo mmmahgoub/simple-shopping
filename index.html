@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanoo Store</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="js/todo.js" defer></script>
+  <style>
+    :root {
+      --primary: #6a1b9a;
+      --secondary: #f3e5f5;
+      --text: #333;
+      --accent: #ff9800;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #fdfdfd;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-family: 'Bad Script', cursive;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .banner {
+      width: 100%;
+      height: 300px;
+      background: url('./resources/images/whatsInStore.png') no-repeat center center / cover;
+      margin-bottom: 2rem;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 1rem;
+    }
+
+    .product-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    footer {
+      background: var(--secondary);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Hanoo Store</h1>
+    <p>Your one-stop shop for amazing deals!</p>
+  </header>
+
+  <div class="banner" role="img" aria-label="Store banner image"></div>
+
+  <main>
+    <h2>Featured Products</h2>
+    <section class="products">
+      <div class="product-card">
+        <img src="resources/images/headphones.jpg" alt="Wireless Headphones" />
+        <div class="product-content">
+          <h3 class="product-title">Wireless Headphones</h3>
+          <p class="price">$59.99</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="resources/images/vintage-clock.jpg" alt="Vintage Clock" />
+        <div class="product-content">
+          <h3 class="product-title">Vintage Wall Clock</h3>
+          <p class="price">$34.99</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="resources/images/laptop-stand.jpg" alt="Laptop Stand" />
+        <div class="product-content">
+          <h3 class="product-title">Aluminum Laptop Stand</h3>
+          <p class="price">$25.00</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="resources/images/coffee-mug.jpg" alt="Coffee Mug" />
+        <div class="product-content">
+          <h3 class="product-title">Custom Coffee Mug</h3>
+          <p class="price">$12.50</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="resources/images/notebook.jpg" alt="Leather Notebook" />
+        <div class="product-content">
+          <h3 class="product-title">Leather Notebook</h3>
+          <p class="price">$18.90</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="resources/images/smartwatch.jpg" alt="Smart Watch" />
+        <div class="product-content">
+          <h3 class="product-title">Smart Watch</h3>
+          <p class="price">$89.00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Hanoo Store. All rights reserved.
+  </footer>
+</body>
+</html>
